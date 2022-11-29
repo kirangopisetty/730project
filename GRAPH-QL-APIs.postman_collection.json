@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "90df0383-4030-40fc-aa2a-78f679c5c73f",
+		"name": "GRAPH-QL-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5040522"
+	},
+	"item": [
+		{
+			"name": "POSITIVE TC",
+			"item": [
+				{
+					"name": "GRAPH-QL-1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present & is JSON\", function () {\r",
+									"        pm.response.to.have.jsonBody;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body contains mandatory field\", function () {\r",
+									"        pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type=application/json; charset=utf-8\", function () {\r",
+									"        pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response time is < 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  company {\r\n    name\r\n    ceo\r\n    coo\r\n    cto\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present & is JSON\", function () {\r",
+									"        pm.response.to.have.jsonBody;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body contains mandatory field\", function () {\r",
+									"        pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type=application/json; charset=utf-8\", function () {\r",
+									"        pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response time is < 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  company {\r\n    name\r\n    summary\r\n    valuation\r\n    vehicles\r\n    employees\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present & is JSON\", function () {\r",
+									"        pm.response.to.have.jsonBody;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body contains mandatory field\", function () {\r",
+									"        pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type=application/json; charset=utf-8\", function () {\r",
+									"        pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response time is < 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  company {\r\n    name\r\n    founded\r\n    founder\r\n    headquarters {\r\n      city\r\n    }\r\n  }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present & is JSON\", function () {\r",
+									"        pm.response.to.have.jsonBody;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body contains mandatory fields\", function () {\r",
+									"        pm.expect(pm.response.text()).to.include(\"flight\");\r",
+									"        pm.expect(pm.response.text()).to.include(\"missions\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type=application/json; charset=utf-8\", function () {\r",
+									"        pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response time is < 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  capsules(limit: 10) {\r\n    landings\r\n    missions {\r\n      flight\r\n      name\r\n    }\r\n    status\r\n    type\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body is present & is JSON\", function () {\r",
+									"        pm.response.to.have.jsonBody;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response body contains mandatory fields\", function () {\r",
+									"        pm.expect(pm.response.text()).to.include(\"crew_capacity\");\r",
+									"        pm.expect(pm.response.text()).to.include(\"description\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if Content-Type=application/json; charset=utf-8\", function () {\r",
+									"        pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify if response time is < 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  dragons {\r\n    active\r\n    crew_capacity\r\n    description\r\n    name\r\n    type\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NEGATIVE TC",
+			"item": [
+				{
+					"name": "GRAPH-QL-5-method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 405\", function () {\r",
+									"        pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  dragons {\r\n    active\r\n    crew_capacity\r\n    description\r\n    name\r\n    type\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-4-method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 405\", function () {\r",
+									"        pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  capsules(limit: 10) {\r\n    landings\r\n    missions {\r\n      flight\r\n      name\r\n    }\r\n    status\r\n    type\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-3-method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 405\", function () {\r",
+									"        pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  company {\r\n    name\r\n    founded\r\n    founder\r\n    headquarters {\r\n      city\r\n    }\r\n  }\r\n}\r\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-2-method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 405\", function () {\r",
+									"        pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  company {\r\n    name\r\n    summary\r\n    valuation\r\n    vehicles\r\n    employees\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRAPH-QL-1-method tampering",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify if response code is 405\", function () {\r",
+									"        pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n  company {\r\n    name\r\n    ceo\r\n    coo\r\n    cto\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://api.spacex.land/graphql/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacex",
+								"land"
+							],
+							"path": [
+								"graphql",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
